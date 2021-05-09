@@ -7,7 +7,7 @@ import javax.swing.*;
 public class GameMain extends JPanel{
 
 	private static final long serialVersionUID = 1L;
-	static final String TITLE = "Snake Jaa Swing";
+	static final String TITLE = "Snake Java Swing";
 	static final int ROWS = 40;
 	static final int COLUMNS = 40;
 	static final int CELL_SIZE = 15;
@@ -84,7 +84,7 @@ public class GameMain extends JPanel{
 			state = GameState.PLAYING;
 
 		}
-		long beginTime, timeTaken, timeLeft; //in msec
+		long beginTime, timeTaken, timeLeft;
 		while(state != GameState.GAMEOVER) {
 			beginTime = System.nanoTime();
 			if(state == GameState.PLAYING) {
@@ -93,7 +93,7 @@ public class GameMain extends JPanel{
 			repaint();
 			timeTaken = System.nanoTime() - beginTime;
 			timeLeft = (UPDATE_PERIOD_NSEC - timeTaken)/ 1000000;
-			if(timeLeft < 10) timeLeft = 10; //set a minium
+			if(timeLeft < 10) timeLeft = 10;
 			try {
 				Thread.sleep(timeLeft);
 			}catch(InterruptedException ex) {}
