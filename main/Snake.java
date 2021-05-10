@@ -4,7 +4,7 @@ import java.awt.*;
 import java.util.*;
 
 public class Snake {
-	private static final int INIT_LENGTH = 3; //snake's cells
+	private static final int INIT_LENGTH = 3;
 	public static enum Direction {
 		UP, DOWN, LEFT, RIGHT
 	}
@@ -21,7 +21,7 @@ public class Snake {
 	
 	public void regenerate() {
 		snakeSegments.clear();
-		int length = INIT_LENGTH; // 3 cells
+		int length = INIT_LENGTH; 
 		int headX = random.nextInt(GameMain.COLUMNS - length * 2) + length;
 		int headY = random.nextInt(GameMain.ROWS - length * 2) + length;
 		direction = Snake.Direction
@@ -44,7 +44,7 @@ public class Snake {
 					int y = headSegment.getHeadY();
 					snakeSegments.add(0, new SnakeSegment(x, y, 0, newDir));
 					direction = newDir;
-					dirUpdatePending = true; //will be cleared after updated
+					dirUpdatePending = true; 
 				}
     
 	}
@@ -53,7 +53,7 @@ public class Snake {
 	public void update() {
 		SnakeSegment headSegment = snakeSegments.get(0);
 		headSegment.grow();
-		dirUpdatePending = false; //can process the key input again
+		dirUpdatePending = false; 
 	}
 	
 	public void shrink() {
@@ -81,7 +81,6 @@ public class Snake {
 	public boolean eatItself() {
 		int headX = getHeadX();
 		int headY = getHeadY();
-		//eat itself if the headX, headY hits its body segment (4th onwards)
 		for(int i =3; i <snakeSegments.size(); ++i) {
 			SnakeSegment segment = snakeSegments.get(i);
 			if(segment.contains(headX, headY)) return true;
@@ -92,7 +91,7 @@ public class Snake {
 	public void draw(Graphics g) {
 		g.setColor(color);
 		for(int i = 0; i< snakeSegments.size(); ++i) {
-			snakeSegments.get(i).draw(g); //draw all the segments
+			snakeSegments.get(i).draw(g); 
 		}
 		
 		if(snakeSegments.size() > 0) {
