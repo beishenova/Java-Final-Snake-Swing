@@ -1,8 +1,8 @@
 package main;
 import java.awt.Graphics;
 public class SnakeSegment {
-	private int headX, headY; //the position of the head's segment
-	private int length; //length of this segment
+	private int headX, headY;
+	private int length; 
 	private Snake.Direction direction;
 	
 	public SnakeSegment(int headX, int headY, int length, Snake.Direction direction) {
@@ -14,7 +14,6 @@ public class SnakeSegment {
 	
 	public void grow() {
 		++length;
-		//need to adjust the headX and headY
 		switch (direction) {
 		case LEFT:
 			--headX;
@@ -32,7 +31,7 @@ public class SnakeSegment {
 	}
 	
 	public void shrink() {
-		length--; //no change in headX and headY needed
+		length--;
 	}
 	
 	public int getLength() {
@@ -54,7 +53,7 @@ public class SnakeSegment {
 		}else if(direction == Snake.Direction.RIGHT) {
 			return headX - length +1;
 		}
-		else { //up and down
+		else {
 			return headX;
 		}
 		
@@ -66,7 +65,7 @@ public class SnakeSegment {
 		}else if(direction == Snake.Direction.UP) {
 			return headY + length -1;
 		}
-		else { // left and right
+		else {
 			return headY;
 		}
 	}
