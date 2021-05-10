@@ -62,7 +62,6 @@ public class GameMain extends JPanel{
 
 	public void gameStart() {
 		Thread gameThread = new Thread() {
-			//Override run() to provide the running behavior of this thread
 			public void run() {
 				gameLoop();
 			}
