@@ -8,4 +8,5 @@ https://www.figma.com/file/AC1SHG2gchzD1lPfsYmGx4/Snake-Java?node-id=0%3A1
 
 https://trello.com/b/useFfuBv
 
-![изображение](https://user-images.githubusercontent.com/73548162/117598685-21ffe400-b16a-11eb-951b-87bd7111d209.png)
+![изображение](https://user-images.githubusercontent.com/73548162/117599050-dac62300-b16a-11eb-82c1-e71e28f5bb42.png)
+
